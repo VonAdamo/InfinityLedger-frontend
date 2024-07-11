@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { sendTransaction, mineBlock, getTransactionPool } from '../services/HttpClient';
+import { sendTransaction, mineBlock, getTransactionPool } from '../services/BlockchainClient';
 
 export const Transactions = () => {
   const [sender, setSender] = useState('');

@@ -1,4 +1,4 @@
-import { getBlockchain } from "../services/HttpClient"
+import { getBlockchain } from "../services/BlockchainClient"
 import { useEffect, useState } from "react"
 
 export const InfinityLedger = () => {
