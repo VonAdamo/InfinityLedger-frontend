@@ -5,20 +5,20 @@ const Register = () => {
     const [user, setUser] = useState({
         name: "",
         email: "",
-        password: "",
-        role: ""
+        password: ""
     });
 
-    const { name, email, password, role } = user;
+    const { name, email, password } = user;
 
     const handleChange = (e) => {
         setUser({ ...user, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = async (e) => {
+        e.preventDefault();
         try {
-            const response = await register(name, email, password, role);
-            console.log(response);
+            const response = await register(name, email, password, "user");
+            console.log("User registered:",response);
             window.alert('Registration successful');
         } catch (error) {
             console.error(error);
