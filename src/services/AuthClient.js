@@ -19,7 +19,13 @@ export const login = async ( email, password ) => {
 
     try {
         const response = await httpClient.post("/auth/login", user);
+        const token = response.data.token;
+
+        if (token) {
+            localStorage.setItem("token", token);
+        }
         return response.data;
+        
     } catch (error) {
         console.error("Error logging in:", error);
         throw error;
