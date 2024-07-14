@@ -4,6 +4,7 @@ import {Home} from "./pages/Home.jsx";
 import {Login} from "./pages/Login.jsx";
 import { InfinityLedger } from "./pages/InfinityLedger.jsx";
 import { Transactions } from "./pages/Transactions.jsx";
+import { Profile } from "./pages/Profile.jsx";
 import {NotFound} from "./pages/NotFound.jsx";
 
 export const router = createBrowserRouter([
@@ -27,7 +28,11 @@ export const router = createBrowserRouter([
             {
                 path: "/transactions",
                 element: <Transactions />
-            }
+            },
+            {
+                path: "/profile",
+                element: <Profile />
+            },
         ]
     }
 ]);

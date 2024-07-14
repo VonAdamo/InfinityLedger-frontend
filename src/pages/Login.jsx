@@ -1,6 +1,6 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
-import Register from '../components/Register';
+import Register from '../components/Register.jsx';
+import SignIn from '../components/Login';
 
 export const Login = () => {
     return (
@@ -8,8 +8,9 @@ export const Login = () => {
             <div>
                 <h1>Register</h1>
                 <Register />
+                <h1>Login</h1>
+                <SignIn />
             </div>
         </>
     )
 }
-export default Login;
