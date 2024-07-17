@@ -28,15 +28,19 @@ export const Profile = () => {
     if (!user) return <div>Loading...</div>
 
     return (
-        <div>
+        <div className='profile-wrapper'>
             <h1>Profile</h1>
-        
-            <p>Name: {user.name}</p>
-            <p>Email: {user.email}</p>
-            <p>Role: {user.role}</p>
-            <p>Created: {new Date(user.createdAt).toLocaleString()}</p>
-            <p>Ready to leave?</p>
-            <button onClick={handleLogout}>Logout</button>
+            <div className='info-wrapper'>
+                <p>Name: {user.name}</p>
+                <p>Email: {user.email}</p>
+                <p>Role: {user.role}</p>
+                <p>Created: {new Date(user.createdAt).toLocaleString()}</p>
+            </div>
+            
+            <div className='logout-wrapper'>
+                <p>Ready to leave?</p>
+                <button onClick={handleLogout}>Logout</button>
+            </div>
         </div>
     )
 }

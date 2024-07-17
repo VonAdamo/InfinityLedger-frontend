@@ -24,6 +24,7 @@ const Register = () => {
             console.error(error);
             window.alert('Registration failed. Please try again.');
         }
+        setUser({ name: "", email: "", password: "" });
     };
 
     return (

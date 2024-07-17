@@ -6,6 +6,7 @@ import { InfinityLedger } from "./pages/InfinityLedger.jsx";
 import { Transactions } from "./pages/Transactions.jsx";
 import { Profile } from "./pages/Profile.jsx";
 import {NotFound} from "./pages/NotFound.jsx";
+import {RouteProtection} from "./services/RouteProtection.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -27,11 +28,17 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/transactions",
-                element: <Transactions />
+                element: 
+                    <RouteProtection>
+                        <Transactions />
+                    </RouteProtection>
             },
             {
                 path: "/profile",
-                element: <Profile />
+                element:
+                    <RouteProtection>
+                        <Profile />
+                    </RouteProtection>
             },
         ]
     }
