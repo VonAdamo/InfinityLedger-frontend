@@ -1,4 +1,41 @@
 :root {
   color-scheme: light dark;
   background-color: #242424;
+  font-family: 'Courier New', Courier, monospace;
 }
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.block {
+  border: solid 1px #fff;
+  padding: 1rem;
+  background: #333;
+  word-wrap: break-word;
+}
+
+.transaction-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: rgb(122, 0, 0);
+  color: rgb(248, 213, 148);
+  border: solid 1px #fff;
+  outline: none;
+  cursor: pointer;
+}
+

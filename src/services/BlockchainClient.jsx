@@ -6,11 +6,11 @@ export const getBlockchain = async () => {
     return response.data;
 };
 
-export const sendTransaction = async (sender, recipient, amount) => {
+export const sendTransaction = async (id, inputMap, outputMap) => {
     const transactionData = {
-      sender: sender,
-      recipient: recipient,
-      amount: amount
+        id,
+        inputMap,
+        outputMap
     };
   
     const response = await axios.post('http://localhost:5001/api/v1/wallet/transaction', transactionData);
@@ -24,5 +24,6 @@ return response.data;
   
 export const mineBlock = async () => {
 const response = await axios.get('http://localhost:5001/api/v1/wallet/mine');
+console.log(response.data);
 return response.data;
 };
